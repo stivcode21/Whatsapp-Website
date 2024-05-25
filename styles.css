@@ -19,30 +19,32 @@ body {
     padding: 15px;
 }
 
-
 .flex-container {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
 }
 
             /*---  NAVBAR  ---*/
 
 .navbar {
-    height: 100%;
-    width: 65px;
-    min-width: 65px;
+    height: 65px;
+    width: 100%;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-navbar);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .navbar a i {
     font-size: 1.2rem;
-    margin-bottom: 25px;
     color: var(--color);
 }
 
@@ -51,12 +53,12 @@ body {
     border-radius: 50px;
 }
 
-.nav-icons a{
-    display: block;
-    margin-left: 3px;
+.nav-icons a {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-.config-perfil a,img {
+.config-perfil a, img {
     display: block;
 }
 
@@ -64,7 +66,7 @@ body {
     margin-left: 7px;
 }
 
-.config-perfil img{
+.config-perfil img {
     width: 35px;
     border-radius: 100%;
     object-fit: cover;
@@ -77,8 +79,11 @@ body {
     position: relative;
 }
 
-.fa-message:hover::after {
-    content: 'chats';
+.fa-message:hover::after,
+.fa-users:hover::after,
+.fa-circle-notch:hover::after,
+.fa-comment-dots:hover::after,
+.fa-gear:hover::after {
     text-transform: lowercase;
     letter-spacing: 1.5px;
     padding: 9px 14px;
@@ -92,99 +97,45 @@ body {
     height: fit-content;
     position: absolute;
     left: 49px;
-    top: 0px;
-} 
+}
 
+.fa-message:hover::after {
+    content: 'chats';
+    top: 0px;
+}
 
 .fa-users:hover::after {
     content: 'comunidades';
-    text-transform: lowercase;
-    letter-spacing: 1.5px;
-    padding: 9px 14px;
-    border-radius: 20px;
-    font-size: .6rem;
-    font-weight: 100;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0 0 10px #0005;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    left: 49px;
     top: 45px;
-} 
+}
 
 .fa-circle-notch:hover::after {
     content: 'estados';
-    text-transform: lowercase;
-    letter-spacing: 1.5px;
-    padding: 9px 15px;
-    border-radius: 20px;
-    font-size: .6rem;
-    font-weight: 100;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0 0 10px #0005;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    left: 49px;
     top: 90px;
-} 
+}
 
 .fa-comment-dots:hover::after {
     content: 'canales';
-    text-transform: lowercase;
-    letter-spacing: 1.5px;
-    padding: 9px 15px;
-    border-radius: 20px;
-    font-size: .6rem;
-    font-weight: 100;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0 0 10px #0005;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    left: 49px;
     top: 134px;
-} 
-
-.config-perfil {
-    position: relative;
 }
-
 
 .fa-gear:hover::after {
     content: 'configuracion';
-    text-transform: lowercase;
-    letter-spacing: 1.5px;
-    padding: 9px 15px;
-    border-radius: 20px;
-    font-size: .6rem;
-    font-weight: 100;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0 0 10px #0005;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
     left: 53px;
     top: 0px;
-} 
-
+}
 
         /*---  CHATS CONTAINER  ---*/
 
-
 .chats-container {
-    height: 100%;
-    width: 30%;
-    min-width: 30%;
+    height: calc(100% - 65px);
+    width: 100%;
     background-color: var(--bg-chats);
+    margin-bottom: 65px;
+    overflow-y: auto;
 }
 
-.container-header{
+.container-header {
     height: 20%;
 }
 
@@ -356,14 +307,13 @@ body {
 
             /*---  MENSSAGES CONTAINER  ---*/
 
-
 .menssages-container {
-    height: 100%;
+    height: calc(100% - 65px);
     width: 100%;
-    min-width: 60%;
+    background-color: var(--bg-chats);
+    overflow-y: auto;
 }
 
-/*menssages header*/
 .menssages-header {
     width: 100%;
     height: 8%;
@@ -371,6 +321,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-navbar);
+    position: sticky;
+    top: 0;
 }
 
 .name-contain {
@@ -409,12 +361,12 @@ body {
 
 /*main menssages*/
 .main {
-    height: 83%;
+    height: calc(100% - 8% - 9%);
     background-image: url(img/chat-bg.jpg);
-    background-size: contain;
-    filter:  grayscale(0.4);
+    background-size: cover;
+    filter: grayscale(0.4);
+    overflow-y: auto;
 }
-
 
 /*footer icons-input*/
 .footer {
@@ -424,6 +376,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    bottom: 0;
 }
 
 .icons-footer {
@@ -445,5 +399,146 @@ body {
 .icons-footer i {
     font-size: 1.5rem;
     color: var(--color);
-    margin: 0 10px;
+    padding: 0 10px;
+}
+
+.send i {
+    color: #4caf50b2;
+}
+
+/*chat bubbles*/
+.menssage {
+    display: inline-flex;
+    margin: 15px;
+    border-radius: 8px;
+    padding: 7px 15px;
+    box-shadow: 0 0 5px #0005;
+}
+
+.you {
+    background-color: #056162f5;
+}
+
+.other {
+    background-color: #202c33;
+}
+
+.menssage span {
+    display: flex;
+    justify-content: end;
+    padding: 2px 0;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+/*adjustment bubbles*/
+.you {
+    margin-left: auto;
+}
+
+.other {
+    margin-right: auto;
+}
+
+/*responsive*/
+@media only screen and (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .chats-container {
+        height: 100%;
+        width: 35%;
+        margin-bottom: 0;
+    }
+
+    .menssages-container {
+        height: 100%;
+        width: 65%;
+    }
+
+    .main {
+        height: calc(100% - 8% - 9%);
+    }
+
+    .menssages-header {
+        height: 8%;
+    }
+
+    .footer {
+        height: 9%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .menssages-container {
+        display: none;
+    }
+
+    .chats-container {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar a i {
+        font-size: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-icon i {
+        font-size: 1rem;
+    }
+
+    .label input {
+        font-size: 0.9rem;
+    }
+
+    .etiquetas span {
+        font-size: 0.8rem;
+    }
+
+    .flex_title h3 {
+        font-size: 1rem;
+    }
+
+    .flex_title span {
+        font-size: 0.6rem;
+    }
+
+    .flex_chat p {
+        font-size: 0.8rem;
+    }
+
+    .name-contain h2 {
+        font-size: 1rem;
+    }
+
+    .icons-info i {
+        font-size: 1rem;
+    }
+
+    .footer .icons-footer input {
+        font-size: 1rem;
+    }
+
+    .icons-footer i {
+        font-size: 1.3rem;
+    }
+
+    .send i {
+        font-size: 1.3rem;
+    }
+
+    .menssage span {
+        font-size: 0.7rem;
+    }
 }
