@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0c1317;
+    --bg-navbar: #202c33;
+    --color: #fff9;
+    --bg-chats: #111b21;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    padding: 15px;
+}
+
+
+.flex-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+            /*---  NAVBAR  ---*/
+
+.navbar {
+    height: 100%;
+    width: 65px;
+    min-width: 65px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-navbar);
+}
+
+.navbar a i {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--color);
+}
+
+.select {
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.nav-icons a{
+    display: block;
+    margin-left: 3px;
+}
+
+.config-perfil a,img {
+    display: block;
+}
+
+.config-perfil a i {
+    margin-left: 7px;
+}
+
+.config-perfil img{
+    width: 35px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+
+        /*---  CHATS CONTAINER  ---*/
+
+
+.chats-container {
+    height: 100%;
+    width: 30%;
+    min-width: 30%;
+    background-color: var(--bg-chats);
+}
+
+.container-header{
+    height: 22%;
+}
+
+/*header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.header-icon {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.header-icon i {
+    font-size: 1.2rem;
+    color: var(--color);
+}
+
+/*search*/
+.container-label {
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    background: var(--bg-navbar);
+    margin-top: 10px;
+    padding: 0 13px;
+    width: 93%;
+    border-radius: 8px;
+}
+
+.label input {
+    background: var(--bg-navbar);
+    color: #fff;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+}
+
+.label i {
+    margin-right: 20px;
+    color: var(--color);
+}
+
+/*etiquetas "todos - no leidos - grupos"*/
+.etiquetas {
+    padding: 16px 20px;
+}
+
+.etiquetas span {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 2px;
+    background-color: var(--bg-navbar);
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.etiquetas .active {
+    color: #4eaf5bcf;
+    background-color: #0a332c;
+}
+
+/*chats*/
+.chats-container .chats {
+    margin-top: 15px;
+}
+
+.chat {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.uno {
+    background: #fff1;
+}
+
+.chat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 5px 8px 5px 15px;
+    object-fit: cover;
+}
+
+.chat:hover {
+    background: #fff1;
+}
+
+.divisor {
+    width: 80%;
+    border-bottom: 2px solid #ccc2;
+
+}
+
+.flex_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_title span {
+    font-weight: 300;
+    padding: 4px 0;
+    font-size: .8rem;
+}
+
+.flex_chat p {
+    padding: 5px 0;
+    color: #ccc5;
+}
+
+            /*---  MENSSAGES CONTAINER  ---*/
+
+
+.menssages-container {
+    height: 100%;
+    width: 100%;
+    min-width: 60%;
+}
+
+/*menssages header*/
+.menssages-header {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-navbar);
+}
+
+.name-contain {
+    display: flex;
+    align-items: center;
+}
+
+.name-contain h2 {
+    font-size: 1.2rem;
+    color: #fffb;
+}
+
+.icons-info {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.icons-info i {
+    font-size: 1.2rem;
+    margin-left: 25px;
+    color: var(--color);
+}
+
+#video {
+    color: #fff3;
+}
+
+.menssages-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 5px 8px 5px 15px;
+    object-fit: cover;
+}
+
+/*main menssages*/
+.main {
+    height: 83%;
+    background-image: url(img/chat-bg.jpg);
+    background-size: contain;
+    filter:  grayscale(0.4);
+}
+
+
+/*footer icons-input*/
+.footer {
+    height: 9%;
+    background-color: var(--bg-navbar);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-footer {
+    width: 100%;
+    padding: 0 0 0 6px;
+}
+
+.footer .icons-footer input {
+    padding: 12px;
+    width: 85%;
+    background-color: #2a3942;
+    font-size: 1.2rem;
+    color: #fffd;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.icons-footer i {
+    font-size: 1.5rem;
+    color: var(--color);
+    margin: 0 10px;
+}
