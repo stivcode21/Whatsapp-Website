@@ -68,8 +68,110 @@ body {
     width: 35px;
     border-radius: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
+/*seudoelemento :after*/    
+
+.nav-icons {
+    position: relative;
+}
+
+.fa-message:hover::after {
+    content: 'chats';
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 100;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0005;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 49px;
+    top: 0px;
+} 
+
+
+.fa-users:hover::after {
+    content: 'comunidades';
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 100;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0005;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 49px;
+    top: 45px;
+} 
+
+.fa-circle-notch:hover::after {
+    content: 'estados';
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 100;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0005;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 49px;
+    top: 90px;
+} 
+
+.fa-comment-dots:hover::after {
+    content: 'canales';
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 100;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0005;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 49px;
+    top: 134px;
+} 
+
+.config-perfil {
+    position: relative;
+}
+
+
+.fa-gear:hover::after {
+    content: 'configuracion';
+    text-transform: lowercase;
+    letter-spacing: 1.5px;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 100;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0005;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 53px;
+    top: 0px;
+} 
 
 
         /*---  CHATS CONTAINER  ---*/
@@ -83,7 +185,7 @@ body {
 }
 
 .container-header{
-    height: 22%;
+    height: 20%;
 }
 
 /*header*/
@@ -138,7 +240,7 @@ body {
 
 /*etiquetas "todos - no leidos - grupos"*/
 .etiquetas {
-    padding: 16px 20px;
+    padding: 16px 15px;
 }
 
 .etiquetas span {
@@ -188,8 +290,8 @@ body {
 
 .divisor {
     width: 80%;
-    border-bottom: 2px solid #ccc2;
-
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc2;
 }
 
 .flex_title {
@@ -197,14 +299,20 @@ body {
     justify-content: space-between;
 }
 
+.flex_title h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
 .flex_title span {
     font-weight: 300;
     padding: 4px 0;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .flex_chat p {
     padding: 5px 0;
+    font-size: .9rem;
     color: #ccc5;
 }
 
@@ -233,7 +341,8 @@ body {
 }
 
 .name-contain h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding-left: 10px;
     color: #fffb;
 }
 
