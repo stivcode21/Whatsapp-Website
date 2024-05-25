@@ -1,5 +1,5 @@
 <h1 align="center">⚛︎WHATSAPP-WEBSITE⚛︎</h1>
-<img src="https://i.ibb.co/FqTzvT3/whatsapp-web.gif" align="center" >
+<img src="https://i.ibb.co/7CS7ZtZ/update-whatsapp.gif" align="center" >
 <span>Hello, I hope to have your ideas and proposals regarding this web
   design project. I would appreciate it. don't forget to give favorites⭐</span>
 <hr>
@@ -8,7 +8,7 @@
 >
 > ◼️NEXT UPDATES◼️
 > 
-> 💠integration of motodoligia bem
+> 💠integration of motodoligia BEM
 > 
 > 💠integration of better documentation
 > 
