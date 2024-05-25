@@ -71,7 +71,7 @@ body {
     cursor: pointer;
 }
 
-/*seudoelemento :after*/    
+/*seudoelemento navbar :after*/    
 
 .nav-icons {
     position: relative;
@@ -209,6 +209,44 @@ body {
 .header-icon i {
     font-size: 1.2rem;
     color: var(--color);
+}
+
+/*seudoelementos header-chats*/
+
+.fa-folder-plus {
+    position: relative;
+}
+
+.fa-folder-plus:hover::after {
+    content: 'nuevo chat';
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+    display: flex;
+    width: 70px;
+    height: fit-content;
+    padding: 5px 2px 5px 10px;
+    background-color: #1d0e0e;
+    border: 1px groove #fff;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.fa-ellipsis-vertical:hover::after {
+    content: 'menu';
+    font-family: sans-serif;
+    position: absolute;
+    display: flex;
+    top: 60px;
+    width: 40px;
+    height: fit-content;
+    padding: 5px 2px 5px 10px;
+    background-color: #1d0e0e;
+    border: 1px groove #fff;
+    font-size: .8rem;
+    font-weight: 400;
+    z-index: 5;
 }
 
 /*search*/
