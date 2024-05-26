@@ -130,6 +130,7 @@ img {
   top: 90px;
 }
 
+
 .fa-comment-dots:hover::after {
   content: "canales";
   text-transform: lowercase;
@@ -147,6 +148,7 @@ img {
   left: 49px;
   top: 134px;
 }
+
 
 .config-perfil {
   position: relative;
