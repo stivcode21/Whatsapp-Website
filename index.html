@@ -22,146 +22,161 @@
 
         <!-- Navbar container -->
         <nav class="navbar">
-            <div class="nav-icons">
-                <div class="select">
-                    <a href="#"><i class="fa-regular fa-message"></i></a>
-                </div>
-                <a href="#"><i class="fa-solid fa-users"></i></a>
-                <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
-                <a href="#"><i class="fa-regular fa-comment-dots"></i></a>
+
+            <div class="navbar__icons">
+                <a href="#" class="navbar__link"><i class="navbar__option fa-regular fa-message"></i></a>
+                <a href="#" class="navbar__link"><i class="navbar__option fa-solid fa-users"></i></a>
+                <a href="#" class="navbar__link"><i class="navbar__option fa-solid fa-circle-notch"></i></a>
+                <a href="#" class="navbar__link"><i class="navbar__option fa-regular fa-comment-dots"></i></a>
+            </div>
+            <div class="config-perfil">
+                <a href="#"><i class="navbar__option fa-solid fa-gear"></i></a>
+                <a href="#"><img class="config-perfil__img" src="img/logostivpeque.jpg" alt=""></a>
             </div>
 
-            <div class="config-perfil">
-                <a href="#"><i class="fa-solid fa-gear"></i></a>
-                <img class="perfil" src="img/logostivpeque.jpg" alt="">
-            </div>
         </nav>
 
 
         <!-- Chats container -->
-        <div class="chats-container">
-            <div class="container-header">
-                <header class="header">
-                    <div>
-                        <h1>Chats</h1>
-                    </div>
+        <section class="chats__container">
 
+            <header class="container__header">
+
+                <div class="header">
+                    <h1 class="header__title">Chats</h1>
                     <div>
-                        <div class="header-icon">
-                            <a href="#"><i class="fa-solid fa-folder-plus"></i></a>
+                        <div class="header__icon">
+                            <a href="#"><i class="header__option fa-solid fa-folder-plus"></i></a>
                         </div>
-                        <div class="header-icon">
-                            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <div class="header__icon">
+                            <a href="#"><i class="header__option fa-solid fa-ellipsis-vertical"></i></a>
                         </div>
                     </div>
-                </header>
+                </div>
 
-                <div class="container-label">
-                    <label class="label" id="input">
-                        <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Buscar" id="input">
+                <div class="search">
+                    <label class="search__label" id="input">
+                        <i class="search__option fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar"  class="search__input" id="input">
                     </label>
                 </div>
-                <div class="etiquetas">
-                    <span class="active">Todos</span>
-                    <span>No leidos</span>
-                    <span>Grupos</span>
+                <div class="labels">
+                    <span class="label label__active">Todos</span>
+                    <span class="label">No leidos</span>
+                    <span class="label">Grupos</span>
                 </div>
-            </div>
-            <!-- chats -->
+
+            </header>
+
             <!-- section archive -->
             <div class="archive">
-                <i class="fa-solid fa-box-archive fa-xl" style="color:#0a332c;"></i>
+                <i class=" archive__icon fa-solid fa-box-archive fa-xl"></i>
                 <p>Archivados</p>
             </div>
 
+            <!---- chats ---->
+
             <div class="chats">
 
-                <div class="chat uno">
-                    <img src="img/tonystarck.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Tony Stark</h3><span>12:24am</span>
+                <div class="chat chat__one">
+                    <img class="chat__img"  src="img/tonystarck.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Tony Stark</h3><span class="chat__hour">12:24am</span>
                         </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chat dos">
-                    <img src="img/elcapi.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>El Capi</h3><span>9:38am</span>
-                        </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
+                        <div class="chat__last">
+                            <p class="chat__extract">"Yo soy Iron Man"...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="chat tres">
-                    <img src="img/tomholland.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Tom Holland</h3><span>8:02am</span>
+                <div class="chat">
+                    <img class="chat__img" src="img/elcapi.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">El Capi</h3><span class="chat__hour">9:38am</span>
                         </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chat cuatro">
-                    <img src="img/wanda.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Wanda</h3><span>7:40am</span>
-                        </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
+                        <div class="chat__last">
+                            <p class="chat__extract">Si debo pelear solo, que así sea...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="chat cinco">
-                    <img src="img/black-panthermarvel.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Black Panther</h3><span>7:03am</span>
+                <div class="chat">
+                    <img class="chat__img" src="img/tomholland.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Tom Holland</h3><span class="chat__hour">8:02am</span>
                         </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chat seis">
-                    <img src="img/thor.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Thor</h3><span>6:45am</span>
-                        </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
+                        <div class="chat__last">
+                            <p class="chat__extract">Un gran poder conlleva una gran responsabilidad...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="chat siete">
-                    <img src="img/hulk.jpg" alt="">
-                    <div class="divisor">
-                        <div class="flex_title">
-                            <h3>Hulk</h3><span>5:06am</span>
+                <div class="chat">
+                    <img class="chat__img" src="img/wanda.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Wanda</h3><span class="chat__hour">7:40am</span>
                         </div>
-                        <div class="flex_chat">
-                            <p>Lorem ipsum dolor sit amet...</p>
+                        <div class="chat__last">
+                            <p class="chat__extract">¿De verdad crees que estoy controlando todo?...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <img class="chat__img" src="img/black-panthermarvel.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Black Panther</h3><span class="chat__hour">7:03am</span>
+                        </div>
+                        <div class="chat__last">
+                            <p class="chat__extract">"Wakanda Forever"...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <img class="chat__img" src="img/thor.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Thor</h3><span class="chat__hour">6:45am</span>
+                        </div>
+                        <div class="chat__last">
+                            <p class="chat__extract">El valor es inmorta...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <img class="chat__img" src="img/hulk.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Hulk</h3><span class="chat__hour">5:06am</span>
+                        </div>
+                        <div class="chat__last">
+                            <p class="chat__extract">¡Hulk aplasta!...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <img class="chat__img" src="img/thanos.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Thanos</h3><span class="chat__hour">4:00am</span>
+                        </div>
+                        <div class="chat__last">
+                            <p class="chat__extract">Deberías haberme golpeado en la cabeza...</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+
+        </section>
 
 
         <!-- menssages -->
