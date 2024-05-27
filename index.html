@@ -68,15 +68,17 @@
 
             </header>
 
-            <!-- section archive -->
-            <div class="archive">
-                <i class=" archive__icon fa-solid fa-box-archive fa-xl"></i>
-                <p>Archivados</p>
-            </div>
+            
 
             <!---- chats ---->
 
             <div class="chats">
+
+                <!-- section archive -->
+            <div class="chat chat__archive">
+                <i class=" archive__icon fa-solid fa-box-archive fa-xl"></i>
+                <p class="archive__text">Archivados</p>
+            </div>
 
                 <div class="chat chat__one">
                     <img class="chat__img"  src="img/tonystarck.jpg" alt="">
@@ -163,6 +165,18 @@
                 </div>
 
                 <div class="chat">
+                    <img class="chat__img" src="img/rocket.jpg" alt="">
+                    <div class="chat__divisor">
+                        <div class="chat__description">
+                            <h3 class="chat__title">Rocket</h3><span class="chat__hour">4:02am</span>
+                        </div>
+                        <div class="chat__last">
+                            <p class="chat__extract">"Algún día, haré grandes máquinas voladoras...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat">
                     <img class="chat__img" src="img/thanos.jpg" alt="">
                     <div class="chat__divisor">
                         <div class="chat__description">
@@ -180,37 +194,38 @@
 
 
         <!-- menssages -->
-        <section class="menssages-container">
-            <header class="menssages-header">
-                <div class="name-contain">
+        
+        <section class="menssages__container">
+            <header class="menssage__header">
+                <div class="menssage__info">
                     <figure>
-                        <img src="img/tonystarck.jpg" alt="">
+                        <img class="menssage__img" src="img/tonystarck.jpg" alt="">
                     </figure>
-                    <div class="contact-information">
-                        <h2>Tony Stark</h2>
-                        <p>haz clic aquí para ver la información del contacto</p>
+                    <div class="menssage__contact-information">
+                        <h2 class="menssage__title">Tony Stark</h2>
+                        <p class="menssage__text">haz clic aquí para ver la información del contacto</p>
                     </div>
                 </div>
-                <div class="icons-info">
-                    <a href="#"><i id="video" class="fa-solid fa-video"></i></a>
-                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i>
+                <div class="menssage__icons-info">
+                    <a href="#"><i class="menssage__info-icon icon__video fa-solid fa-video"></i></a>
+                    <a href="#"><i class="menssage__info-icon fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="menssage__info-icon fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </header>
 
             <!-- main menssages -->
             <main class="main">
-
+                <!--proximos menssage a incluir-->
             </main>
 
             <footer class="footer">
-                <div class="icons-footer">
-                    <div class="icons-reactions">
-                        <a href="#"><i class="fa-regular fa-face-smile"></i></a>
-                        <a href="#"><i class="fa-solid fa-plus"></i></a>
+                <div class="footer__contain">
+                    <div class="footer__icons">
+                        <a href="#"><i class="footer__icon fa-regular fa-face-smile"></i></a>
+                        <a href="#"><i class="footer__icon fa-solid fa-plus"></i></a>
                     </div>
-                    <input class="input-text" type="text" placeholder="Escribe un mensaje">
-                    <a href="#"><i class="fa-solid fa-microphone button-audio"></i></a>
+                    <input class="footer_interaction footer__input-text" type="text" placeholder="Escribe un mensaje">
+                    <a href="#"><i class="footer__icon footer__audio fa-solid fa-microphone"></i></a>
                 </div>
             </footer>
         </section>

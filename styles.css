@@ -278,7 +278,7 @@ body {
 
 /*etiquetas "todos - no leidos - grupos"*/
 .labels {
-  padding: 16px 15px;
+  padding: 12px 15px;
 }
 
 .label {
@@ -299,6 +299,7 @@ body {
   background-color: #0a332c;
 }
 
+
 /*chat*/
 
 .chat {
@@ -307,6 +308,45 @@ body {
   display: flex;
   align-items: center;
   color: #fff;
+}
+
+/*seccion archivados*/
+.chat__archive {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  gap: 20px;
+  padding: 10px 0 10px 20px;
+  align-items: center;
+}
+
+.archive__icon {
+  color: #0a332c;
+  font-size: 1.5rem;
+  padding: 0 5px;
+}
+
+.archive__text {
+  width: 80%;
+  font-size: 1.1em;
+  color: white;
+}
+
+.chats {
+  overflow-y: auto;
+  height: 79%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #494949;
 }
 
 .chat:hover {
@@ -361,14 +401,14 @@ body {
 
 
 
-.menssages-container {
+.menssages__container {
   height: 100%;
   width: 100%;
   min-width: 60%;
 }
 
 /*menssages header*/
-.menssages-header {
+.menssage__header {
   width: 100%;
   height: 8%;
   display: flex;
@@ -377,32 +417,12 @@ body {
   background-color: var(--bg-navbar);
 }
 
-.name-contain {
+.menssage__info {
   display: flex;
   align-items: center;
 }
 
-.name-contain h2 {
-  font-size: 1.1rem;
-  color: #fffb;
-}
-
-.icons-info {
-  margin-left: auto;
-  margin-right: 25px;
-}
-
-.icons-info i {
-  font-size: 1.2rem;
-  margin-left: 25px;
-  color: var(--color);
-}
-
-#video {
-  color: #fff3;
-}
-
-.menssages-header img {
+.menssage__img {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -410,13 +430,44 @@ body {
   object-fit: cover;
 }
 
+.menssage__title {
+  font-size: 1.1rem;
+  color: #fffb;
+  padding-left: 10px;
+}
+
+.menssage__text {
+  color: rgb(158, 158, 158);
+  font-size: 0.8em;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+
+.menssage__icons-info {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.menssage__info-icon {
+  font-size: 1.2rem;
+  margin-left: 25px;
+  color: var(--color);
+}
+
+.icon__video {
+  color: #fff3;
+}
+
+
 /*main menssages*/
 .main {
   height: 83%;
   background-image: url(img/chat-bg.jpg);
   background-size: contain;
   filter: grayscale(0.4);
-}
+} /*<<<proximos messages a incluir*/
+
+
 
 /*footer icons-input*/
 .footer {
@@ -428,14 +479,32 @@ body {
   justify-content: center;
 }
 
-.icons-footer {
+.footer__contain {
   display: flex;
   width: 100%;
   padding: 0 0 0 6px;
   align-items: center;
 }
 
-.footer .icons-footer input {
+.footer__reaction, .footer__icon {
+  display: inline-block;
+}
+
+.footer__input-text {
+  margin-right: 10px;
+}
+
+.footer__icons {
+  display: flex;
+}
+
+.footer__icon {
+  font-size: 1.5rem;
+  color: var(--color);
+  margin: 0 10px;
+}
+
+.footer__input-text {
   padding: 12px;
   width: 85%;
   background-color: #2a3942;
@@ -446,73 +515,199 @@ body {
   outline: none;
 }
 
-.icons-footer i {
-  font-size: 1.5rem;
-  color: var(--color);
-  margin: 0 10px;
+/*--- GRACIAS SAMITO POR TU CONTRIBUCION <3 ---*/
+
+
+/*---  MEDIA QUERIES  ---*/
+
+@media screen and (max-width: 1200px){
+
+  body{
+    padding: 0;
+  }
+
+  .chats__container {
+    min-width: 40%;
+  }
+
+  .container__header {
+    width: 100%;
+  }
+
+  .menssages__container{
+    min-width: 50%;
+  }
+
+  .menssage__info {
+    font-size: .6rem;
+  }
+
+  .menssage__info-icon {
+    font-size: .9rem;
+    margin: 2px;
+  }
+
 }
 
- /* clases añadias para revision */
-.button-audio,
-.input-text {
-  display: inline-block;
+@media screen and (max-width: 1000px){
+
+  body{
+    padding: 0;
+  }
+
+  .chats__container {
+    min-width: 45%;
+  }
+
+  .container__header {
+    width: 100%;
+  }
+
+  .menssages__container{
+    min-width: 50%;
+  }
+
+  .menssage__info {
+    font-size: .6rem;
+  }
+
+  .menssage__info-icon {
+    font-size: .9rem;
+    margin: 2px;
+  }
+
 }
 
-.input-text {
-  margin-right: 10px;
+@media screen and (max-width: 768px){
+
+  body{
+    padding: 0;
+  }
+
+  .chats__container {
+    min-width: 50%;
+  }
+
+  .container__header {
+    width: 100%;
+  }
+
+  .menssages__container{
+    min-width: 65%;
+  }
+
+  .menssage__info {
+    font-size: .6rem;
+  }
+
+  .menssage__info-icon {
+    font-size: .9rem;
+    margin: 2px;
+  }
+
 }
 
-.icons-reactions {
-  display: flex;
+
+@media screen and (max-width: 600px){
+  .chats__container {
+    min-width: 60%;
+  }
+
+  .chats {
+    width: 95%;
+    margin: auto;
+  }
+
+  .container__header {
+    width: 100%;
+  }
+
+  .menssages__container{
+    min-width: 65%;
+  }
+
+  .menssage__info {
+    font-size: .6rem;
+  }
+
+  .menssage__info-icon {
+    font-size: .9rem;
+    margin: 2px;
+  }
+
 }
 
-.contact-information {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
+@media screen and (max-width: 500px){
+  .chats__container {
+    min-width: 70%;
+  }
+
+  .menssages__container{
+    min-width: 65%;
+  }
 }
 
-.contact-information p {
-  color: rgb(158, 158, 158);
-  font-size: 0.8em;
-  margin-top: 5px;
+
+
+@media screen and (max-width: 480px) {
+  
+  .flex-container{
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .config-perfil {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+
+
+  .chats__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar__icons, .config-perfil{
+    margin: auto;
+  }
+
+  .navbar__option {
+    font-size: 1.5rem;
+  }
+
+  .config-perfil__img {
+    display: block;
+    margin: auto;
+    margin-top: -25px;
+    width: 40px;
+  }
+
+  .menssages__container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .menssage__header {
+    height: 10%;
+    font-size: .7rem;
+  }
+
+  .main {
+    height: 100vh;
+  }
+
 }
 
-.archive {
-  display: flex;
-  width: 100%;
-  height: 50px;
-  gap: 20px;
-  padding: 10px 0 10px 20px;
-  align-items: center;
-  border-bottom: 1px solid #ffffff13;
-}
 
-.archive__icon {
-  color: #0a332c;
-  font-size: 1.5rem;
-  padding: 0 5px;
-}
 
-.archive p {
-  width: 80%;
-  font-size: 1.1em;
-  color: white;
-}
 
-.chats {
-  overflow-y: auto;
-  height: 72%;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #fff1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #494949;
-}

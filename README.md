@@ -6,17 +6,29 @@
 
 > [!NOTE]
 >
+> 🌀CURRENT UPDATE🌀
+>
+> integration of motodoligia BEM✅
+>
+> new responsive integration on the page✅
+>
+> of interactivity with the mouse in some icons✅
+>
+> new archiving section ✅
+>
+> nueva barra de croll en la seccion de chats ✅
+>
+> documentation keywords to understand the code ✅
+>
 > ◼️NEXT UPDATES◼️
-> 
-> 💠integration of motodoligia BEM
-> 
+>
 > 💠integration of better documentation
 > 
 > 💠 the MAIN section I will add messages
 > 
-> 💠The site will also be made responsive
-> 
-> 💠I will add more interactivity with :hover ::before
+> 💠 fix some bugs
+>
+> 💠 Optimizaré el código
 >
 > 🔴ALL THIS AND MORE SOON🔴
 
@@ -27,4 +39,7 @@
 > <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 > <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
  
-
+> [!IMPORTANT]
+> 🎩contributors "thank you"📣:
+>
+> SAMITO
