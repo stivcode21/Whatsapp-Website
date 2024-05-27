@@ -334,7 +334,7 @@ body {
 
 .chats {
   overflow-y: auto;
-  height: 79%;
+  height: 78%;
 }
 
 ::-webkit-scrollbar {
