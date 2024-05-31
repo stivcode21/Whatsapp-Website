@@ -376,7 +376,7 @@ body {
   justify-content: space-between;
 }
 
-.chat__title{
+.chat__title {
   font-size: 1.1rem;
   font-weight: 400;
 }
@@ -465,7 +465,9 @@ body {
   background-image: url(img/chat-bg.jpg);
   background-size: contain;
   filter: grayscale(0.4);
-} /*<<<proximos messages a incluir*/
+}
+
+/*<<<proximos messages a incluir*/
 
 
 
@@ -486,7 +488,8 @@ body {
   align-items: center;
 }
 
-.footer__reaction, .footer__icon {
+.footer__reaction,
+.footer__icon {
   display: inline-block;
 }
 
@@ -520,9 +523,9 @@ body {
 
 /*---  MEDIA QUERIES  ---*/
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
 
-  body{
+  body {
     padding: 0;
   }
 
@@ -534,7 +537,7 @@ body {
     width: 100%;
   }
 
-  .menssages__container{
+  .menssages__container {
     min-width: 50%;
   }
 
@@ -549,21 +552,21 @@ body {
 
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
-  body{
+  body {
     padding: 0;
   }
 
   .chats__container {
-    min-width: 45%;
+    min-width: 40%;
   }
 
   .container__header {
     width: 100%;
   }
 
-  .menssages__container{
+  .menssages__container {
     min-width: 50%;
   }
 
@@ -578,22 +581,22 @@ body {
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-  body{
+  body {
     padding: 0;
   }
 
   .chats__container {
-    min-width: 50%;
+    min-width: 40%;
   }
 
   .container__header {
     width: 100%;
   }
 
-  .menssages__container{
-    min-width: 65%;
+  .menssages__container {
+    min-width: 40%;
   }
 
   .menssage__info {
@@ -605,53 +608,42 @@ body {
     margin: 2px;
   }
 
-}
 
+  /* --------------- Esto esta agregado por pipe --------------- */
 
-@media screen and (max-width: 600px){
   .chats__container {
-    min-width: 60%;
-  }
-
-  .chats {
-    width: 95%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .container__header {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    padding-bottom: 5px;
   }
 
-  .menssages__container{
-    min-width: 65%;
+  .labels {
+    display: flex;
+    flex-wrap: wrap;
+
   }
 
-  .menssage__info {
-    font-size: .6rem;
+  .header__icon {
+    width: 1px;
   }
 
-  .menssage__info-icon {
-    font-size: .9rem;
-    margin: 2px;
+  .search__option {
+    width: 1px;
   }
 
 }
 
-@media screen and (max-width: 500px){
-  .chats__container {
-    min-width: 70%;
-  }
 
-  .menssages__container{
-    min-width: 65%;
-  }
-}
+@media screen and (max-width: 600px) {
 
-
-
-@media screen and (max-width: 480px) {
-  
-  .flex-container{
+  .flex-container {
     flex-direction: column;
     height: 100vh;
   }
@@ -661,7 +653,7 @@ body {
     height: 60px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .config-perfil {
@@ -670,25 +662,35 @@ body {
     align-items: center;
   }
 
-
-
   .chats__container {
     width: 100%;
     height: 100%;
   }
 
-  .navbar__icons, .config-perfil{
-    margin: auto;
+  .navbar__icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .navbar__icons a {
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+  }
+
+  .config-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar__option {
     font-size: 1.5rem;
+    margin: 0;
   }
 
   .config-perfil__img {
-    display: block;
-    margin: auto;
-    margin-top: -25px;
     width: 40px;
   }
 
@@ -707,7 +709,3 @@ body {
   }
 
 }
-
-
-
-
